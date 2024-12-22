@@ -45,3 +45,146 @@ aside {
   background-color: #f9f9f9;
   padding: 10px;
 }
+/* General body and layout settings */
+body {
+  font-family: Arial, sans-serif; /* Set a simple font */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Make the body responsive and use flexbox */
+body.works_on_smartphone {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+}
+
+/* Header styling */
+header {
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+header li {
+  margin-right: 20px;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .logo {
+  font-size: 30px;  /* Increase the size of the logo */
+  margin-right: 10px;
+}
+
+/* Article and Main Layout */
+main {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+article {
+  flex: 2;
+  margin-right: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+article h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+article h2 {
+  color: #444;
+}
+
+article p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+/* Aside Styling */
+aside {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+aside p {
+  font-size: 1.1em;
+  color: #666;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column; /* Stack articles and aside on small screens */
+  }
+
+  article {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
