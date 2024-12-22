@@ -1,6 +1,6 @@
 /* Set background image for the entire page */
 body {
-    background-image: url('Object.png'); /* Replace with the actual path to your image */
+    background-image: url(Object.png); /* Replace with the actual path to your image */
     background-size: cover; /* Ensures the image covers the entire page */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -48,51 +48,73 @@ nav a {
 
 /* Hero Section */
 .hero {
+    padding: 60px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 80px 0;
-    color: white;
+    text-align: center;
+    width: 100%; /* Ensures it spans the full width of the page */
 }
 
 .hero .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;     /* Center the content vertically */
+    flex-direction: column;  /* Stack elements vertically */
     max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .hero-content {
-    max-width: 600px;
+    text-align: center; /* Ensures text is centered */
 }
 
-.hero-content h2 {
-    font-size: 3em;
+.hero h2 {
+    font-size:10rem; /* Make the text large for prominence */
+    font-weight: bold;
+    color: #333; /* Dark color for the title */
     margin-bottom: 20px;
 }
 
-.hero-content ul {
-    padding-left: 0;
+.hero ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 0;
 }
 
-.hero-content li {
-    margin-bottom: 10px;
+.hero ul li {
+    margin: 0 15px; /* Space items apart */
+    font-size: 1.5rem;
+    color: #666; /* Lighter color for the list items */
+    font-weight: bold; /* Make the list items stand out */
 }
 
-.hero-content button {
-    padding: 10px 20px;
-    background-color: #ff6600;
+.hero ul li:hover {
+    color: #333; /* Change color on hover for a better effect */
+}
+
+.hero button {
+    background-color: #6a4cbb; /* Purple background */
     color: white;
     border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2em;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Adds space between the list and the button */
+}
+
+.hero button:hover {
+    background-color: #5a3a9c; /* Darker purple on hover */
 }
 
 .hero-image {
-    max-width: 400px;
-    text-align: center;
+    display: none; /* Hide the hero image */
 }
 
 /* Instructors Section */
@@ -125,12 +147,369 @@ nav a {
 .instructor p {
     font-size: 1em;
 }
+/* Testimonial Section */
+.testimonial-section {
+    background-color: #FFC0CB; /* White background */
+    padding: 60px 0;
+    text-align: left; /* Align the content to the left */
+}
 
-/* Footer */
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: center;
+.testimonial {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex; /* Use flexbox to align the image and text side by side */
+    align-items: center; /* Vertically align content */
     padding: 20px;
 }
 
+.testimonial-image img {
+    width: 100px; /* Adjust image size */
+    height: 100px; /* Adjust image size */
+    border-radius: 50%; /* Make the image round */
+    margin-right: 20px; /* Add space between the image and the text */
+}
+
+.testimonial-content {
+    max-width: 700px; /* Limit the width of the content */
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-style: italic; /* Italicize the testimonial text */
+}
+
+.author {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+/* Container for the Tutorials */
+.tutorials-container {
+    display: flex; /* Use Flexbox for horizontal alignment */
+    gap: 20px; /* Space between tutorials */
+    flex-wrap: wrap; /* Ensures responsiveness (wrap to next row if needed) */
+    justify-content: space-between; /* Space out tutorials evenly */
+    padding: 20px;
+}
+
+/* Individual Tutorial Cards */
+.tutorial {
+    flex: 1 1 calc(25% - 20px); /* Adjust for 4 items in a row */
+    max-width: calc(20% - 20px); /* Prevents cards from exceeding 25% width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff; /* Background for each card */
+    padding: 15px;
+}
+
+/* Video Thumbnail */
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.video-thumbnail .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px; /* Adjust size of play icon */
+    height: 40px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.video-thumbnail .play-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.video-thumbnail:hover .play-icon {
+    opacity: 1;
+}
+
+/* Tutorial Content */
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author span {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Read More Button */
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #6a1b9a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #8e24aa;
+}
+
+/* Free Membership Section */
+.free-membership {
+    background-color: #0d1b2a; /* Dark background */
+    color: #ffffff; /* White text */
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.free-membership h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.free-membership h2 span {
+    color: #a855f7; /* Purple color for "Free" */
+}
+
+.free-membership .cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.free-membership .card {
+    flex: 1 1 calc(25% - 20px); /* 4 cards in a row */
+    max-width: calc(20% - 20px);
+    background: none;
+    padding: 20px;
+    text-align: center;
+}
+
+.free-membership .card .icon {
+    margin-bottom: 15px;
+}
+
+.free-membership .card .icon img {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) saturate(100%) invert(51%) sepia(68%) saturate(1815%) hue-rotate(262deg) brightness(91%) contrast(105%);
+    /* Purple icon color */
+}
+
+.free-membership .card h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.free-membership .card p {
+    font-size: 14px;
+    color: #bbbbbb; /* Subtle text color for description */
+}
+
+.free-membership .register-button {
+    background-color: #a855f7; /* Purple button */
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.free-membership .register-button:hover {
+    background-color: #8e44ad; /* Darker purple on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .free-membership .cards {
+        flex-wrap: wrap;
+    }
+
+    .free-membership .card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .free-membership .card {
+        flex: 1 1 100%; /* Stack cards vertically on small screens */
+        max-width: 100%;
+    }
+
+    .free-membership .register-button {
+        width: 100%;
+    }
+}
+/* FAQ Section */
+.faq-section {
+    background-color: #ffffff; /* White background */
+    color: #0d1b2a; /* Dark text */
+    padding: 60px 20px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #0d1b2a; /* Dark text for the title */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.faq-section .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 40px; /* Space between items */
+    max-width: 1200px;
+    margin: 0 auto; /* Center align the grid */
+}
+
+.faq-section .faq-item {
+    text-align: left; /* Align text to the left for FAQ items */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.faq-section .faq-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0d1b2a; /* Same dark text color */
+}
+
+.faq-section .faq-item p {
+    color: #6b7280; /* Subtle gray color for paragraph text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-section .faq-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .faq-section h2 {
+        font-size: 28px;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #0d1b2a; /* Dark background color */
+    color: #ffffff; /* White text color */
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; /* White logo text */
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: #8a8a8a; /* Subtle gray for copyright text */
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.social-media-icons a {
+  font-size: 30px;
+  color: #333;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-media-icons a:hover {
+  color: #007bff; /* Change color on hover */
+}
